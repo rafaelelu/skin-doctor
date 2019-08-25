@@ -40,7 +40,7 @@ sendBtn.addEventListener('click', function () {
         success: function (response) {
             if (response != 0) {
                 Swal.fire({
-                    html: 'Score prediction for' + `<strong style="color: #ff0000;">${response.tag}</strong>` + is +
+                    html: 'Score prediction for ' + `<strong style="color: #ff0000;">${response.tag}</strong>` + ' is ' +
                         `<strong>${response.confidence}</strong>` + '. <br>Please consult with your doctor.',
                     width: window.innerWidth
                 });

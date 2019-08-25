@@ -39,14 +39,13 @@ sendBtn.addEventListener('click', function () {
         processData: false,
         success: function (response) {
             if (response != 0) {
-                console.log(response);
                 Swal.fire({
                     html: 'There is a probability of ' + `<strong>${((response.confidence) * 100).toFixed(2)}%</strong>` +
                         ' of you having: ' + `<strong style="color: #ff0000;">${response.tag}</strong>` + '. <br>Please consult with your doctor.',
                     width: window.innerWidth
                 });
             } else {
-                alert('file not uploaded');
+                alert('File not uploaded');
             }
         },
     });

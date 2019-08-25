@@ -40,8 +40,8 @@ sendBtn.addEventListener('click', function () {
         success: function (response) {
             if (response != 0) {
                 Swal.fire({
-                    html: 'There is a probability of ' + `<strong>${((response.confidence) * 100).toFixed(2)}%</strong>` +
-                        ' of you having: ' + `<strong style="color: #ff0000;">${response.tag}</strong>` + '. <br>Please consult with your doctor.',
+                    html: 'Score prediction for' + `<strong style="color: #ff0000;">${response.tag}</strong>` + is +
+                        `<strong>${response.confidence}</strong>` + '. <br>Please consult with your doctor.',
                     width: window.innerWidth
                 });
             } else {
